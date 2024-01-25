@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "48642022-b745-478c-a600-dc2e5a5c5523",
+		"name": "WEB3_RENTALMOBIL",
+		"description": "Anggota:\n\n1. Mochamad Rafli Fadilla Nugraha\n    \n2. Fauzan Kamal\n    \n3. Faunita Raihan Dzahirah\n    \n4. Dwipandra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30729963"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "getAllCustomers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Fauzan\",\r\n  \"alamat\": \"789 Baleendah\",\r\n  \"telp\": \"083254622722\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dwi\",\r\n    \"alamat\": \"123 Regol\",\r\n    \"telp\": \"08977867876\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customers/65b209c90ffce384de9fe228",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"65b209c90ffce384de9fe228"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Add Customer, Edit Customer"
+		},
+		{
+			"name": "Car",
+			"item": [
+				{
+					"name": "getAllCar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCarById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cars/65b209140ffce384de9fe221",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cars",
+								"65b209140ffce384de9fe221"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"brand\": \"Honda\",\r\n  \"model\": \"Brio\",\r\n  \"tahun\": 2015,\r\n  \"hargasewa\": 300000,\r\n  \"stock\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/cars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCarById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"brand\": \"Honda\",\r\n  \"model\": \"Civic\",\r\n  \"tahun\": 2020,\r\n  \"hargasewa\": 550000,\r\n  \"stock\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/cars/65b209420ffce384de9fe223",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cars",
+								"65b209420ffce384de9fe223"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCarById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cars/65b2474bd5ba5cf7b700d6e8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cars",
+								"65b2474bd5ba5cf7b700d6e8"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "List Mobil, CRUD Mobil"
+		},
+		{
+			"name": "Rental",
+			"item": [
+				{
+					"name": "rental",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"carId\": \"65b209420ffce384de9fe223\",\r\n  \"customerId\": \"65b2552a626847ff5a48a3b3\",\r\n  \"startDate\": \"2024-01-27\",\r\n  \"endDate\": \"2024-01-31\",\r\n  \"duration\": 4\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/rentals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"rentals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllRentals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/rentals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"rentals"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Penyewaan"
+		},
+		{
+			"name": "Return",
+			"item": [
+				{
+					"name": "returnCar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rentalId\": \"65b2646daa9797a2db4501c6\",\r\n  \"condition\": \"Mobil dalam kondisi baik-baik saja\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/returns",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"returns"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllReturn",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/returns",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"returns"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Pengembalian"
+		}
+	]
+}
